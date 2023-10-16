@@ -17,6 +17,7 @@ lazy val root = (project in file("."))
         "junit" % "junit" % "4.12" % "test",
         "org.mockito" % "mockito-core" % "1.10.19" % "test"
       ),
-      assembly / test := {}
+      assembly / test := {},
+      assembly / assemblyOption := (assemblyOption in assembly).value.copy(includeScala = false)
     )
   )
